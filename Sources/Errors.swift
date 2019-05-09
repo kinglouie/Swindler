@@ -1,5 +1,6 @@
 import AXSwift
 import PromiseKit
+import Cocoa
 
 enum OSXDriverError: Error {
     case missingAttribute(attribute: AXSwift.Attribute, onElement: Any)

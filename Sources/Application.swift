@@ -1,5 +1,6 @@
 import AXSwift
 import PromiseKit
+import Cocoa
 
 // MARK: - Application
 
@@ -379,7 +380,7 @@ extension OSXApplicationDelegate {
             }
         }.catch { error in
             switch error {
-            case AXSwift.AXError.invalidUIElement:
+            case AXError.invalidUIElement:
                 // The window is already gone.
                 property.refresh()
                 self.newWindowHandler.removeAllForUIElement(element)

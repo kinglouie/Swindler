@@ -11,6 +11,7 @@
 
 import AXSwift
 import PromiseKit
+import Cocoa
 
 fileprivate typealias AppElement = EmittingTestApplicationElement
 
@@ -294,7 +295,7 @@ class TestPropertyDelegate<T: Equatable, Object: TestObject>: PropertyDelegate {
     func readValue() throws -> T? {
         guard let object = object, object.isValid else {
             // TODO make cause optional
-            throw PropertyError.invalidObject(cause: AXSwift.AXError.invalidUIElement)
+            throw PropertyError.invalidObject(cause: AXError.invalidUIElement)
         }
         return getter(object)
     }
@@ -302,7 +303,7 @@ class TestPropertyDelegate<T: Equatable, Object: TestObject>: PropertyDelegate {
     func writeValue(_ newValue: T) throws {
         guard let object = object, object.isValid else {
             // TODO make cause optional
-            throw PropertyError.invalidObject(cause: AXSwift.AXError.invalidUIElement)
+            throw PropertyError.invalidObject(cause: AXError.invalidUIElement)
         }
         setter(object, newValue)
     }

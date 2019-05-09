@@ -1,5 +1,6 @@
 import AXSwift
 import PromiseKit
+import Cocoa
 
 /// Initializes a new Swindler state and returns it in a Promise.
 public func initialize() -> Promise<State> {

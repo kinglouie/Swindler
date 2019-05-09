@@ -1,5 +1,6 @@
 import AXSwift
 import PromiseKit
+import Cocoa
 
 // MARK: - Window
 

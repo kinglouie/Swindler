@@ -1,4 +1,7 @@
 /// Internal logger.
+
+import Cocoa
+
 internal private(set) var log = Log()
 
 private let COLOR_ENABLED = (ProcessInfo().environment["SWINDLER_COLOR"] == "1")
