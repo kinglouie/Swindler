@@ -13,7 +13,7 @@ let package = Package(
     targets: [
         .target(
             name: "Swindler",
-            dependencies: ["AXSwift", "PromiseKit"]
+            dependencies: ["AXSwift", "PromiseKit"],
             path: "Sources"
         )
     ]
